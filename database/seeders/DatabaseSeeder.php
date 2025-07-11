@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
         // Run CMS seeder
         $this->call([
             CmsSeeder::class,
+            VietnamDataSeeder::class,
         ]);
     }
 }

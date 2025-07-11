@@ -79,7 +79,15 @@ class ItemsRelationManager extends RelationManager
             ->columns([
                 TextColumn::make('label')
                     ->label('Label')
-                    ->formatStateUsing(fn ($state) => $state ? ($state['en'] ?? 'N/A') : 'N/A')
+                    ->formatStateUsing(function ($state) {
+                        if (is_array($state) && isset($state['en'])) {
+                            return $state['en'];
+                        }
+                        if (is_string($state)) {
+                            return $state;
+                        }
+                        return 'N/A';
+                    })
                     ->searchable()
                     ->sortable(),
                 
@@ -100,7 +108,15 @@ class ItemsRelationManager extends RelationManager
                 
                 TextColumn::make('parent.label')
                     ->label('Parent')
-                    ->formatStateUsing(fn ($state) => $state ? ($state['en'] ?? 'N/A') : 'N/A'),
+                    ->formatStateUsing(function ($state) {
+                        if (is_array($state) && isset($state['en'])) {
+                            return $state['en'];
+                        }
+                        if (is_string($state)) {
+                            return $state;
+                        }
+                        return 'N/A';
+                    }),
                 
                 TextColumn::make('children_count')
                     ->label('Children')

@@ -19,6 +19,7 @@ use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TernaryFilter;
 
 class NavigationMenuResource extends Resource
@@ -75,7 +76,15 @@ class NavigationMenuResource extends Resource
             ->columns([
                 TextColumn::make('name')
                     ->label('Name')
-                    ->formatStateUsing(fn ($state) => $state ? ($state['en'] ?? 'N/A') : 'N/A')
+                    ->formatStateUsing(function ($state) {
+                        if (is_array($state) && isset($state['en'])) {
+                            return $state['en'];
+                        }
+                        if (is_string($state)) {
+                            return $state;
+                        }
+                        return 'N/A';
+                    })
                     ->searchable()
                     ->sortable(),
                 

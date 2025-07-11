@@ -45,6 +45,14 @@ class ServiceResource extends Resource
                                     ->label('Name (English)')
                                     ->required()
                                     ->maxLength(255),
+                                TextInput::make('slug.en')
+                                    ->label('Slug (English)')
+                                    ->required()
+                                    ->maxLength(255),
+                                Textarea::make('short_description.en')
+                                    ->label('Short Description (English)')
+                                    ->rows(2)
+                                    ->maxLength(500),
                                 Textarea::make('description.en')
                                     ->label('Description (English)')
                                     ->rows(3)
@@ -56,12 +64,31 @@ class ServiceResource extends Resource
                                     ->label('Name (Vietnamese)')
                                     ->required()
                                     ->maxLength(255),
+                                TextInput::make('slug.vi')
+                                    ->label('Slug (Vietnamese)')
+                                    ->required()
+                                    ->maxLength(255),
+                                Textarea::make('short_description.vi')
+                                    ->label('Short Description (Vietnamese)')
+                                    ->rows(2)
+                                    ->maxLength(500),
                                 Textarea::make('description.vi')
                                     ->label('Description (Vietnamese)')
                                     ->rows(3)
                                     ->maxLength(1000),
                             ]),
                     ]),
+                
+                TextInput::make('price')
+                    ->label('Price (VND)')
+                    ->numeric()
+                    ->required()
+                    ->placeholder('e.g., 850000'),
+                
+                TextInput::make('duration')
+                    ->label('Duration')
+                    ->required()
+                    ->placeholder('e.g., 8 hours, 2 days 1 night'),
                 
                 Select::make('type')
                     ->options([
@@ -88,9 +115,26 @@ class ServiceResource extends Resource
             ->columns([
                 TextColumn::make('name')
                     ->label('Name')
-                    ->formatStateUsing(fn ($state) => $state ? ($state['en'] ?? 'N/A') : 'N/A')
+                    ->formatStateUsing(function ($state) {
+                        if (is_array($state) && isset($state['en'])) {
+                            return $state['en'];
+                        }
+                        if (is_string($state)) {
+                            return $state;
+                        }
+                        return 'N/A';
+                    })
                     ->searchable()
                     ->sortable(),
+                
+                TextColumn::make('price')
+                    ->label('Price (VND)')
+                    ->money('VND')
+                    ->sortable(),
+                
+                TextColumn::make('duration')
+                    ->label('Duration')
+                    ->searchable(),
                 
                 TextColumn::make('type')
                     ->badge()

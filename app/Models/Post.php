@@ -46,12 +46,14 @@ class Post extends Model implements Sortable, HasMedia
         'content',
         'meta_title',
         'meta_description',
+        'seo_keywords',
     ];
 
     protected $casts = [
         'published_at' => 'datetime',
         'is_featured' => 'boolean',
         'view_count' => 'integer',
+        'seo_keywords' => 'array',
     ];
 
     public function getSlugOptions(): SlugOptions
