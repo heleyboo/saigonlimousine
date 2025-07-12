@@ -15,10 +15,11 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\EloquentSortable\Sortable;
 use Spatie\EloquentSortable\SortableTrait;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends Model implements Sortable, HasMedia
 {
-    use HasTranslations, HasSlug, HasTags, InteractsWithMedia, SortableTrait;
+    use HasTranslations, HasSlug, HasTags, InteractsWithMedia, SortableTrait, HasFactory;
 
     protected $fillable = [
         'title',

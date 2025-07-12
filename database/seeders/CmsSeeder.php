@@ -8,6 +8,7 @@ use App\Models\Tag;
 use App\Models\Service;
 use App\Models\NavigationMenu;
 use App\Models\NavigationItem;
+use Illuminate\Support\Str;
 
 class CmsSeeder extends Seeder
 {
@@ -166,6 +167,12 @@ class CmsSeeder extends Seeder
                     'en' => 'Premium limousine service for airport transfers and city tours',
                     'vi' => 'Dịch vụ limousine cao cấp cho đưa đón sân bay và tham quan thành phố'
                 ],
+                'short_description' => [
+                    'en' => 'Premium limousine service',
+                    'vi' => 'Dịch vụ limousine cao cấp'
+                ],
+                'price' => 1500000,
+                'duration' => '4 hours',
                 'type' => 'limousine',
             ],
             [
@@ -174,6 +181,12 @@ class CmsSeeder extends Seeder
                     'en' => 'Reliable airport transfer service to and from major airports',
                     'vi' => 'Dịch vụ đưa đón sân bay đáng tin cậy đến và đi từ các sân bay lớn'
                 ],
+                'short_description' => [
+                    'en' => 'Reliable airport transfers',
+                    'vi' => 'Đưa đón sân bay đáng tin cậy'
+                ],
+                'price' => 800000,
+                'duration' => '2 hours',
                 'type' => 'airport_transfer',
             ],
             [
@@ -182,6 +195,12 @@ class CmsSeeder extends Seeder
                     'en' => 'Guided city tours with professional drivers and comfortable vehicles',
                     'vi' => 'Tham quan thành phố có hướng dẫn với tài xế chuyên nghiệp và xe thoải mái'
                 ],
+                'short_description' => [
+                    'en' => 'Guided city tours',
+                    'vi' => 'Tham quan thành phố có hướng dẫn'
+                ],
+                'price' => 1200000,
+                'duration' => '8 hours',
                 'type' => 'city_tour',
             ],
             [
@@ -190,6 +209,12 @@ class CmsSeeder extends Seeder
                     'en' => 'Full-day excursion services to nearby attractions and destinations',
                     'vi' => 'Dịch vụ tham quan trọn ngày đến các điểm tham quan và điểm đến gần đó'
                 ],
+                'short_description' => [
+                    'en' => 'Full-day excursions',
+                    'vi' => 'Tham quan trọn ngày'
+                ],
+                'price' => 2000000,
+                'duration' => '12 hours',
                 'type' => 'day_trip',
             ],
             [
@@ -198,9 +223,23 @@ class CmsSeeder extends Seeder
                     'en' => 'Elegant limousine service for special wedding occasions',
                     'vi' => 'Dịch vụ limousine thanh lịch cho các dịp cưới hỏi đặc biệt'
                 ],
+                'short_description' => [
+                    'en' => 'Elegant wedding service',
+                    'vi' => 'Dịch vụ cưới hỏi thanh lịch'
+                ],
+                'price' => 3000000,
+                'duration' => '6 hours',
                 'type' => 'wedding_service',
             ],
         ];
+
+        foreach ($services as &$serviceData) {
+            $serviceData['slug'] = [
+                'en' => Str::slug($serviceData['name']['en']),
+                'vi' => Str::slug($serviceData['name']['vi']),
+            ];
+        }
+        unset($serviceData);
 
         foreach ($services as $serviceData) {
             Service::create($serviceData);

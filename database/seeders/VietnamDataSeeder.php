@@ -352,6 +352,130 @@ class VietnamDataSeeder extends Seeder
                 'is_featured' => false,
                 'seo_keywords' => ['sapa', 'trekking', 'mountains', 'ethnic', 'vietnam'],
             ],
+            [
+                'title' => [
+                    'en' => 'Essential Travel Tips for Vietnam',
+                    'vi' => 'Mẹo du lịch cần thiết cho Việt Nam'
+                ],
+                'slug' => [
+                    'en' => 'essential-travel-tips-vietnam',
+                    'vi' => 'meo-du-lich-can-thiet-viet-nam'
+                ],
+                'short_description' => [
+                    'en' => 'Everything you need to know before visiting Vietnam - from visas to local customs',
+                    'vi' => 'Tất cả những gì bạn cần biết trước khi đến Việt Nam - từ visa đến phong tục địa phương'
+                ],
+                'content' => [
+                    'en' => '<p>Planning a trip to Vietnam? Here are essential tips to make your journey smooth and enjoyable. First, check your visa requirements - many nationalities can enter Vietnam visa-free for up to 15 days, while others need to apply for an e-visa.</p><p>When it comes to transportation, Vietnam has an excellent domestic flight network, but don\'t miss the experience of traveling by train or bus for scenic routes. In cities, ride-hailing apps like Grab are convenient and safe.</p><p>Respect local customs by dressing modestly when visiting temples, removing shoes when entering homes, and learning a few basic Vietnamese phrases. The locals appreciate the effort!</p>',
+                    'vi' => '<p>Lên kế hoạch du lịch Việt Nam? Đây là những mẹo cần thiết để hành trình của bạn suôn sẻ và thú vị. Trước tiên, kiểm tra yêu cầu visa - nhiều quốc tịch có thể nhập cảnh Việt Nam miễn visa trong 15 ngày, trong khi những người khác cần xin e-visa.</p><p>Về giao thông, Việt Nam có mạng lưới bay nội địa tuyệt vời, nhưng đừng bỏ lỡ trải nghiệm đi tàu hoặc xe buýt cho các tuyến đường đẹp. Trong thành phố, các ứng dụng gọi xe như Grab rất tiện lợi và an toàn.</p><p>Tôn trọng phong tục địa phương bằng cách ăn mặc khiêm tốn khi thăm chùa, cởi giày khi vào nhà và học một vài cụm từ tiếng Việt cơ bản. Người dân địa phương đánh giá cao nỗ lực này!</p>'
+                ],
+                'meta_title' => [
+                    'en' => 'Essential Travel Tips for Vietnam',
+                    'vi' => 'Mẹo du lịch cần thiết cho Việt Nam'
+                ],
+                'meta_description' => [
+                    'en' => 'Everything you need to know before visiting Vietnam - from visas to local customs',
+                    'vi' => 'Tất cả những gì bạn cần biết trước khi đến Việt Nam - từ visa đến phong tục địa phương'
+                ],
+                'type' => 'travel_tips',
+                'status' => 'published',
+                'published_at' => now()->subDays(2),
+                'is_featured' => false,
+                'seo_keywords' => ['travel tips', 'vietnam', 'visa', 'customs', 'transportation'],
+            ],
+            [
+                'title' => [
+                    'en' => 'Perfect 7-Day Vietnam Itinerary',
+                    'vi' => 'Lộ trình 7 ngày hoàn hảo cho Việt Nam'
+                ],
+                'slug' => [
+                    'en' => 'perfect-7-day-vietnam-itinerary',
+                    'vi' => 'lo-trinh-7-ngay-hoan-hao-viet-nam'
+                ],
+                'short_description' => [
+                    'en' => 'From Hanoi to Ho Chi Minh City - the ultimate week-long adventure through Vietnam',
+                    'vi' => 'Từ Hà Nội đến TP.HCM - cuộc phiêu lưu một tuần tuyệt vời qua Việt Nam'
+                ],
+                'content' => [
+                    'en' => '<p>Have only a week to explore Vietnam? This carefully crafted itinerary takes you from the historic capital of Hanoi to the vibrant metropolis of Ho Chi Minh City, with stops at some of the country\'s most beautiful destinations.</p><p>Day 1-2: Start in Hanoi, exploring the Old Quarter, Hoan Kiem Lake, and the Temple of Literature. Day 3-4: Travel to Ha Long Bay for an overnight cruise among the limestone karsts. Day 5: Fly to Da Nang and visit the ancient town of Hoi An. Day 6-7: Continue to Ho Chi Minh City to experience the modern side of Vietnam.</p><p>This itinerary balances cultural experiences, natural beauty, and urban exploration, giving you a comprehensive taste of Vietnam\'s diversity.</p>',
+                    'vi' => '<p>Chỉ có một tuần để khám phá Việt Nam? Lộ trình được thiết kế cẩn thận này đưa bạn từ thủ đô lịch sử Hà Nội đến đô thị sôi động TP.HCM, với các điểm dừng tại một số điểm đến đẹp nhất của đất nước.</p><p>Ngày 1-2: Bắt đầu tại Hà Nội, khám phá Phố cổ, Hồ Hoàn Kiếm và Văn Miếu. Ngày 3-4: Du lịch đến Vịnh Hạ Long cho chuyến du thuyền qua đêm giữa các đảo đá vôi. Ngày 5: Bay đến Đà Nẵng và thăm phố cổ Hội An. Ngày 6-7: Tiếp tục đến TP.HCM để trải nghiệm mặt hiện đại của Việt Nam.</p><p>Lộ trình này cân bằng trải nghiệm văn hóa, vẻ đẹp thiên nhiên và khám phá đô thị, mang đến cho bạn hương vị toàn diện về sự đa dạng của Việt Nam.</p>'
+                ],
+                'meta_title' => [
+                    'en' => 'Perfect 7-Day Vietnam Itinerary',
+                    'vi' => 'Lộ trình 7 ngày hoàn hảo cho Việt Nam'
+                ],
+                'meta_description' => [
+                    'en' => 'From Hanoi to Ho Chi Minh City - the ultimate week-long adventure through Vietnam',
+                    'vi' => 'Từ Hà Nội đến TP.HCM - cuộc phiêu lưu một tuần tuyệt vời qua Việt Nam'
+                ],
+                'type' => 'itinerary',
+                'status' => 'published',
+                'published_at' => now()->subDays(5),
+                'is_featured' => true,
+                'seo_keywords' => ['itinerary', 'vietnam', '7 days', 'hanoi', 'ho chi minh city'],
+            ],
+            [
+                'title' => [
+                    'en' => 'Special Summer Promotion: 20% Off All Tours',
+                    'vi' => 'Khuyến mãi mùa hè đặc biệt: Giảm 20% tất cả các tour'
+                ],
+                'slug' => [
+                    'en' => 'special-summer-promotion-20-off-tours',
+                    'vi' => 'khuyen-mai-mua-he-dac-biet-giam-20-tour'
+                ],
+                'short_description' => [
+                    'en' => 'Book your dream Vietnam vacation now and save big with our exclusive summer deals',
+                    'vi' => 'Đặt kỳ nghỉ mơ ước Việt Nam ngay bây giờ và tiết kiệm lớn với các ưu đãi mùa hè độc quyền'
+                ],
+                'content' => [
+                    'en' => '<p>Summer is the perfect time to explore Vietnam, and we\'re making it even better with our exclusive promotion! Book any tour between June and August and enjoy a 20% discount on all our premium services.</p><p>This limited-time offer includes our most popular tours: Ha Long Bay cruises, Sapa trekking adventures, Hoi An cultural experiences, and Mekong Delta discoveries. All tours include luxury transportation, expert guides, and premium accommodations.</p><p>Don\'t miss this opportunity to experience Vietnam at its best while saving money. Contact us today to secure your spot and start planning your unforgettable journey!</p>',
+                    'vi' => '<p>Mùa hè là thời điểm hoàn hảo để khám phá Việt Nam, và chúng tôi làm cho nó còn tốt hơn với khuyến mãi độc quyền! Đặt bất kỳ tour nào giữa tháng 6 và tháng 8 và tận hưởng giảm giá 20% cho tất cả dịch vụ cao cấp của chúng tôi.</p><p>Ưu đãi có thời hạn này bao gồm các tour phổ biến nhất: Du thuyền Vịnh Hạ Long, phiêu lưu trekking Sa Pa, trải nghiệm văn hóa Hội An và khám phá Đồng bằng sông Cửu Long. Tất cả các tour đều bao gồm giao thông sang trọng, hướng dẫn viên chuyên nghiệp và chỗ ở cao cấp.</p><p>Đừng bỏ lỡ cơ hội này để trải nghiệm Việt Nam ở mức tốt nhất trong khi tiết kiệm tiền. Liên hệ với chúng tôi ngay hôm nay để đảm bảo vị trí của bạn và bắt đầu lên kế hoạch cho hành trình khó quên!</p>'
+                ],
+                'meta_title' => [
+                    'en' => 'Special Summer Promotion: 20% Off All Tours',
+                    'vi' => 'Khuyến mãi mùa hè đặc biệt: Giảm 20% tất cả các tour'
+                ],
+                'meta_description' => [
+                    'en' => 'Book your dream Vietnam vacation now and save big with our exclusive summer deals',
+                    'vi' => 'Đặt kỳ nghỉ mơ ước Việt Nam ngay bây giờ và tiết kiệm lớn với các ưu đãi mùa hè độc quyền'
+                ],
+                'type' => 'promotion',
+                'status' => 'published',
+                'published_at' => now()->subDays(1),
+                'is_featured' => true,
+                'seo_keywords' => ['promotion', 'summer', 'discount', 'vietnam tours', 'special offer'],
+            ],
+            [
+                'title' => [
+                    'en' => 'Best Time to Visit Vietnam: Weather Guide',
+                    'vi' => 'Thời điểm tốt nhất để đến Việt Nam: Hướng dẫn thời tiết'
+                ],
+                'slug' => [
+                    'en' => 'best-time-visit-vietnam-weather-guide',
+                    'vi' => 'thoi-diem-tot-nhat-den-viet-nam-huong-dan-thoi-tiet'
+                ],
+                'short_description' => [
+                    'en' => 'Plan your perfect Vietnam trip with our comprehensive weather and seasonal guide',
+                    'vi' => 'Lên kế hoạch chuyến đi Việt Nam hoàn hảo với hướng dẫn thời tiết và mùa vụ toàn diện'
+                ],
+                'content' => [
+                    'en' => '<p>Vietnam\'s diverse climate means there\'s always a good time to visit, but choosing the right season can make your trip even more enjoyable. The country has three distinct regions with different weather patterns.</p><p>Northern Vietnam (Hanoi, Sapa, Ha Long Bay) has four seasons with cool winters and hot summers. The best time to visit is from September to November and March to May. Central Vietnam (Hue, Hoi An, Da Nang) experiences a tropical monsoon climate with the best weather from January to August. Southern Vietnam (Ho Chi Minh City, Mekong Delta) has a tropical climate with two seasons - dry (November to April) and wet (May to October).</p><p>Consider your preferred activities when planning - trekking in Sapa is best in the dry season, while beach activities in central Vietnam are perfect during the summer months.</p>',
+                    'vi' => '<p>Khí hậu đa dạng của Việt Nam có nghĩa là luôn có thời điểm tốt để đến thăm, nhưng chọn đúng mùa có thể làm cho chuyến đi của bạn còn thú vị hơn. Đất nước có ba vùng riêng biệt với các kiểu thời tiết khác nhau.</p><p>Miền Bắc Việt Nam (Hà Nội, Sa Pa, Vịnh Hạ Long) có bốn mùa với mùa đông mát mẻ và mùa hè nóng. Thời điểm tốt nhất để đến thăm là từ tháng 9 đến tháng 11 và tháng 3 đến tháng 5. Miền Trung Việt Nam (Huế, Hội An, Đà Nẵng) có khí hậu nhiệt đới gió mùa với thời tiết tốt nhất từ tháng 1 đến tháng 8. Miền Nam Việt Nam (TP.HCM, Đồng bằng sông Cửu Long) có khí hậu nhiệt đới với hai mùa - khô (tháng 11 đến tháng 4) và ẩm (tháng 5 đến tháng 10).</p><p>Cân nhắc các hoạt động ưa thích khi lên kế hoạch - trekking ở Sa Pa tốt nhất vào mùa khô, trong khi các hoạt động bãi biển ở miền Trung Việt Nam hoàn hảo trong những tháng mùa hè.</p>'
+                ],
+                'meta_title' => [
+                    'en' => 'Best Time to Visit Vietnam: Weather Guide',
+                    'vi' => 'Thời điểm tốt nhất để đến Việt Nam: Hướng dẫn thời tiết'
+                ],
+                'meta_description' => [
+                    'en' => 'Plan your perfect Vietnam trip with our comprehensive weather and seasonal guide',
+                    'vi' => 'Lên kế hoạch chuyến đi Việt Nam hoàn hảo với hướng dẫn thời tiết và mùa vụ toàn diện'
+                ],
+                'type' => 'travel_tips',
+                'status' => 'published',
+                'published_at' => now()->subDays(3),
+                'is_featured' => false,
+                'seo_keywords' => ['weather', 'vietnam', 'best time', 'climate', 'seasons'],
+            ],
         ];
 
         foreach ($posts as $postData) {
